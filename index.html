@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Modelos</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['blouses', 'sale', 'skirts', 'trousers'],
+            datasets: [{
+              label: 'page 2 (clothing model)',
+              data: [59, 82, 34, 43],
+              borderWidth: 2,
+            }]
+          },
+          options: {
+                title: {
+                display: true,
+                fontSize: 20,
+                text: 'mainCategory',
+            },
+            labels: {
+                fonsStyle: 'bold'
+            },
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+        });
+      </script>
+</body>
+
+</html>
